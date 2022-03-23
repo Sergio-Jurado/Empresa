@@ -7,6 +7,5 @@ for elemento in lista1:
     if elemento in lista2:
         if elemento not in lista3:
             lista3.append(elemento)
-
 print(lista3)
     
