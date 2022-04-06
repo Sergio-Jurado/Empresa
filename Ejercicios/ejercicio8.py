@@ -1,4 +1,4 @@
-# Escribir en un fichero de texto
+# Escribir en un fichero de texto y después leerlo.
 """
 mensaje = input("Escriba el mensaje que desa escribir dentro de un archivo txt: ")
 with open("archivo.txt", "w" ) as f:
