@@ -1,5 +1,5 @@
 #Dibujar en el terminal un tablero se le pregunta al usuario el tamaño 
-"""""
+"""
  --- --- --- 
 |   |   |   |
  --- --- --- 
@@ -7,10 +7,7 @@
  --- --- --- 
 |   |   |   |
  --- --- ---
- """
 
-
-"""
 print(" --- \n|   |\n ---")
 print(" --- --- \n|   |   |\n --- --- \t\n|   |   |\n --- --- ")
 print(" --- --- --- \n|   |   |   |\n --- --- --- \t\n|   |   |   |\n --- --- --- \t\n|   |   |   |\n --- --- --- ")
@@ -26,7 +23,7 @@ else:
             resultado2 = ("\n|   |\n ---")
         resultadof = (resultado1 + resultado2)*i
         print (resultadof)
-"""
+
 print(" ---")
 print("|   |")
 print(" ---")
@@ -52,6 +49,7 @@ def horizontal(numero):
         resultado = resultado + (" ---")
     return resultado 
 
+
 def vertical(numero):
     resultado = ""
     for elemento in range (numero+1):
@@ -74,3 +72,28 @@ tamamo = int(input("escribe un número: "))
 T = (tablero(tamamo))
 with open("archivo.txt", "w" ) as f:
     f.write(T)
+"""
+from Tablero import tablero
+
+def crear_tabla(numero):
+    resultado=[]
+    for i in range(numero):
+        temporal=[]
+        for j in range(numero):
+            temporal+=[""]
+        
+        resultado+=[temporal]
+
+        
+    return resultado
+    
+    
+ 
+
+tamano=int(input("¿De cuanto quieres que sea tu tablero? "))
+crear=crear_tabla(tamano)
+print(crear)  
+
+
+p=tablero(crear)
+print(p)
